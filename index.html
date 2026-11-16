@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Start a conversation. A demonstration contact page for GIC Infotech.">
+  <meta name="theme-color" content="#16483f">
+  <title>Let's talk — GIC Infotech Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="contact.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="GIC Infotech demo home">
+        <span class="brand-mark" aria-hidden="true">g.</span>
+        <span>GIC <strong>Infotech</strong></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#contact" aria-current="page">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="contact-layout" id="contact" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow"><span class="small-line" aria-hidden="true"></span> SAY HELLO</p>
+          <h1 id="page-title">Good things<br>start with a<br><em>conversation.</em></h1>
+          <p class="intro-copy">A new idea, a big question, or just a hello.<br class="desktop-break"> We'd love to hear what's on your mind.</p>
+
+          <div class="conversation-art" aria-hidden="true">
+            <span class="art-orbit"></span>
+            <span class="bubble bubble-back"><i></i><i></i><i></i></span>
+            <span class="bubble bubble-front">hello<span>↗</span></span>
+            <span class="art-spark">✳</span>
+          </div>
+
+          <div class="contact-note">
+            <span class="note-icon" aria-hidden="true">↗</span>
+            <div><p class="note-title">Prefer email?</p><p class="sample-email">hello@example.com</p><p class="small-text">Sample address for this demonstration.</p></div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <div class="form-heading"><span class="eyebrow">LET'S CONNECT</span><span class="demo-badge">Demo</span></div>
+          <h2>Tell us a little about you.</h2>
+          <p class="form-intro" id="form-help">Fill in the details below. Fields marked * are required.</p>
+
+          <form id="contact-form" aria-describedby="form-help demo-note" onsubmit="return false">
+            <div class="field-row">
+              <div class="field">
+                <label for="full-name">Your name <span aria-hidden="true">*</span></label>
+                <input id="full-name" name="name" type="text" autocomplete="name" placeholder="Alex Morgan" required maxlength="100" pattern=".*\S.*">
+              </div>
+              <div class="field">
+                <label for="email">Email address <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="alex@example.com" required maxlength="254">
+              </div>
+            </div>
+            <div class="field">
+              <label for="topic">What brings you here? <span aria-hidden="true">*</span></label>
+              <select id="topic" name="topic" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option value="project">I have a project in mind</option>
+                <option value="question">I have a question</option>
+                <option value="collaboration">I'd like to collaborate</option>
+                <option value="hello">Just saying hello</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Your message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="A little context goes a long way. Tell us about your idea…" required maxlength="3000" aria-describedby="message-hint"></textarea>
+              <div class="field-hint"><span id="message-hint">A few sentences are a great start.</span><span id="character-count">0 / 3000</span></div>
+            </div>
+            <button id="submit-button" type="submit" disabled>Try demo submission <span aria-hidden="true">↗</span></button>
+            <p class="demo-note" id="demo-note">Just a demo. Messages aren't sent or saved.</p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            <noscript><p class="no-script">Enable JavaScript to try the demo form. No messages will be sent.</p></noscript>
+          </form>
+        </div>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <div><p class="eyebrow">A LITTLE CLARITY</p><h2 id="faq-title">Before you say hello.</h2></div>
+        <div class="faq-items">
+          <details><summary>Does this form send a real message?</summary><p>This is a demonstration. Submitting shows a confirmation on this page without sending or saving your details.</p></details>
+          <details><summary>What should I include in my message?</summary><p>Try a short introduction, what you'd like to build or ask, and any timing you have in mind. Sample details work perfectly for this demo.</p></details>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>GIC Infotech <span class="footer-dot" aria-hidden="true">·</span> Contact page demo</span><span>Made for good conversations.</span></footer>
+  </div>
+</body>
+</html>
